@@ -2,8 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class TitleAudio : BaseAudio {
-
-
+	
 	void Start () {
 
 		number_of_audios = 1;
@@ -24,12 +23,9 @@ public class TitleAudio : BaseAudio {
 	public override void play(){
 
 		audioSources [0].Play ();
-
 		Invoke ("TitleEnd",0.1f);
 
 	}
 
-	void TitleEnd(){
-		GameController.Instance.ChangeScene (1);
-	}
+	void TitleEnd(){  GameController.Instance.ChangeScene (1);	}
 }

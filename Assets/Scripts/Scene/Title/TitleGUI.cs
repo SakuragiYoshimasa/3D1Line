@@ -8,7 +8,7 @@ public class TitleGUI : BaseGUI {
 	public GameObject startButtonInstance;
 	
 	public Button startButton;
-	// Use this for initialization
+
 	void Start () {
 
 		title = InstantiateApi.InstanceAsChild (this.gameObject,Resources.Load ("Title") as GameObject);
@@ -18,17 +18,10 @@ public class TitleGUI : BaseGUI {
 		startButton.onClick.AddListener (StartClicked);
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
 
 	void StartClicked(){
 
-
 		GameController.Instance.audioManager.StartCoroutine("play");
-		Debug.Log("start");
 
 	}
 
