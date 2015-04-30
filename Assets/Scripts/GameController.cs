@@ -7,10 +7,6 @@ public class GameController : Singleton<GameController> {
 	public GameObject GUImanagerObject;
 	public GameObject audioManagerObject;
 
-	public GameManager gameManager;
-	public GUIManager GUImanager;
-	public AudioManager audioManager;
-
 	// Use this for initialization
 	void Start () {
 
@@ -19,7 +15,6 @@ public class GameController : Singleton<GameController> {
 		audioManagerObject =  InstantiateApi.InstanceAsChild (this.gameObject, Resources.Load ("Manager/AudioManager") as GameObject);
 
 		ChangeScene (0);
-
 	}
 
 	public void ChangeScene(int index){

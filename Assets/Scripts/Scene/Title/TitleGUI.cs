@@ -21,7 +21,7 @@ public class TitleGUI : BaseGUI {
 
 	void StartClicked(){
 
-		AudioManager.Instance.StartCoroutine("play");
+		AudioManager.Instance.play();
 
 	}
 

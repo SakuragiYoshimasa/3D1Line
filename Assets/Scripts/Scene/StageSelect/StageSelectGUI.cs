@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class StageSelectGUI : BaseGUI {
+
+
 	
 	void Start () {
 	
