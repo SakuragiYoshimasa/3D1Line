@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StageSelectAudio : MonoBehaviour {
+public class StageSelectAudio : BaseAudio {
 
 	// Use this for initialization
 	void Start () {

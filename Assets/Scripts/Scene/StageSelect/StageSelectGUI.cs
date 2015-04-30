@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class StageSelectGUI : MonoBehaviour {
+public class StageSelectGUI : BaseGUI {
 
 	// Use this for initialization
 	void Start () {
