@@ -3,17 +3,13 @@ using System.Collections;
 
 public class TitleAudio : BaseAudio {
 
-	public AudioSource[] audioSources;
-	public AudioClip[] audioClips;
-	public GameObject[] audios;
-	public int number_of_audios = 1;
 
-	// Use this for initialization
 	void Start () {
 
-		audios = new GameObject[1];
-		audioSources = new AudioSource[1];
-		audioClips = new AudioClip[1];
+		number_of_audios = 1;
+		audios = new GameObject[number_of_audios];
+		audioSources = new AudioSource[number_of_audios];
+		audioClips = new AudioClip[number_of_audios];
 	
 		for(int i = 0; i < number_of_audios; i++){
 
@@ -23,8 +19,6 @@ public class TitleAudio : BaseAudio {
 			audioSources[i].clip = audioClips[i];
 
 		}
-
-	
 	}
 
 	public override void play(){
