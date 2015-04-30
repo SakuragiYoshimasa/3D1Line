@@ -1,0 +1,13 @@
+/*
+/*/
+
+!/Assets/
+!/ProjectSettings/
+!.gitignore
+
+.DS_Store
+._*
+.Spotlight-V100
+.Trashs
+ehthumbs.db
+Thumbs.db
