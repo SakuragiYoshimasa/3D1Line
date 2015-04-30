@@ -14,30 +14,15 @@ public class GameController : Singleton<GameController> {
 	// Use this for initialization
 	void Start () {
 
-	/*	gameManagerObject = Instantiate (Resources.Load("Manager/GameManager")) as GameObject;
-		GUImanagerObject = Instantiate (Resources.Load("Manager/GUIManager")) as GameObject;
-		audioManagerObject = Instantiate (Resources.Load("Manager/AudioManager")) as GameObject;
-
-		gameManagerObject.transform.parent = this.gameObject.transform;
-		GUImanagerObject.transform.parent = this.gameObject.transform;
-		audioManagerObject.transform.parent = this.gameObject.transform;*/
-
 		gameManagerObject = InstantiateApi.InstanceAsChild (this.gameObject,Resources.Load("Manager/GameManager") as GameObject);
 		GUImanagerObject = InstantiateApi.InstanceAsChild (this.gameObject, Resources.Load ("Manager/GUIManager") as GameObject);
 		audioManagerObject =  InstantiateApi.InstanceAsChild (this.gameObject, Resources.Load ("Manager/AudioManager") as GameObject);
-
-		GUImanager = GUImanagerObject.GetComponent<GUIManager> ();
-		gameManager = gameManagerObject.GetComponent<GameManager> ();
-		audioManager = audioManagerObject.GetComponent<AudioManager> ();
 
 		ChangeScene (0);
 
 	}
 
 	public void ChangeScene(int index){
-	/*	gameManager.SetGame (index);
-		GUImanager.SetGUI (index);
-		audioManager.SetAudio (index);*/
 
 		GameManager.Instance.SetGame (index);
 		GUIManager.Instance.SetGUI (index);
